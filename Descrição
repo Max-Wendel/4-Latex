@@ -1,5 +1,20 @@
 ---4Latex---
+  
   O 4Latex é um projeto de sensenvolvimento, que se trata de um sistema de compartilhamento de scripts 
 da linguagem de texto Latex
   
-  O sistema terá 
+  O sistem surgiu da motivação de disponibilizar conteúdo, da linguagem de texto Latex, em um único lugar com uma apresentação
+simples e ilustrativa que também disponibilizará o script pronto para uso.
+  
+  O sistema disponibilizará scripts prontos para copiar e colar no seu próprio documento de texto Latex, tendo, cada script, 
+uma imagem ilustrativa de exemplo, como também um nome (que servirá para buscar um determinado script pela barra de pesquisa). 
+
+  O sistema também possui templates de projetos, que já traz com eles um conjunto de script que é necessário pra compor um 
+documento mais complexo, como por exemplo um artigo que corresponde as normas da Sociação Brasileira de Computação (SBC) para 
+os Encontros Universitários da Univeridade Federal do Ceará Campus Quixadá.
+
+  Os sistema está projetado para trabalhar com dois tipos de usuários, o usuário comum, que irá navegar pelo sistema e usar os 
+scripts e/ou os templates disponíveis, e o usuário administrador, que irá adicinionar, excluir e editar scripts e templates do
+sistema.
+
+  

@@ -1,7 +1,3 @@
-$('#bt').click(function(){
-	$('#modal').modal(options);
-});
-
 
 $(function(){
     // Executa o evento click no button

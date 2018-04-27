@@ -1,7 +1,7 @@
 
 $(function(){
     // Executa o evento click no button
-    $('button').click(function(){
+    $('#buttonCopiar').click(function(){
         // Seleciona o conteúdo do input
         $('textarea').select();
         // Copia o conteudo selecionado

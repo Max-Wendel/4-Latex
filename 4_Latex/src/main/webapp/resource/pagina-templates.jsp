@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html id="tppage">
 <head>
@@ -8,35 +10,11 @@
 <title>Templates</title>
 </head>
 <body id="tppage" >
-    <header>
-		<nav id="nav-header" class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="pagina-inicial.html#homepage">4Latex</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarColor01">
-				<ul class="navbar-nav mr-auto">
-					<li><a class="nav-link" href="pagina-categorias.html#cpage">Categorias
-					<span class="sr-only">(current)</span>
-					</a></li>
-					<li class="nav-item  active"><a class="nav-link" href="pagina-templates.html#tppage">Templates</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="pagina-ajuda.html#hpage">
-					<span class="glyphicon glyphicon-question-sign"></span>Ajuda</a>
-				</ul>
-									<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Procurar" size="20">
-						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Procurar</button>
-					</form>
-			</div>
-		</nav>
-
-	</header>
+	<jsp:include page = "header.html">
 	
 	<div class="jumbotron">
 		<h1 class="display-3">Templates</h1>
-		<p class="lead">São paginas completas, compostas de elementos graficos e textuais. Usá-los pode lhe poupar um trabalhão :-)</p>
+		<p class="lead">SÃ£o paginas completas, compostas de elementos graficos e textuais. UsÃ¡-los pode lhe poupar um trabalhÃ£o :-)</p>
 		<hr class="my-4">
 	</div>
 	<div class="container" >
@@ -45,7 +23,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Encontros Universitarios</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -54,7 +32,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>TCC I</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -63,7 +41,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>TCC II</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -74,7 +52,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Artigo Cientifico</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -83,7 +61,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Sem Ideia I</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -92,7 +70,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Sem Ideia II</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -103,7 +81,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Encontros Universitarios</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -112,7 +90,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>TCC I</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -121,7 +99,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>TCC II</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -132,7 +110,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Artigo Cientifico</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -141,7 +119,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Sem Ideia I</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -150,7 +128,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Sem Ideia II</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -161,7 +139,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Encontros Universitarios</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -170,7 +148,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>TCC I</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -179,7 +157,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>TCC II</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -190,7 +168,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Artigo Cientifico</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -199,7 +177,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Sem Ideia I</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -208,7 +186,7 @@
 				<img alt="" src="../img/black.jpeg">
 				<h4>Sem Ideia II</h4>
 				<p>
-					Breve Descriçao..................................
+					Breve DescriÃ§ao..................................
 					.................................................
 				</p>
 			</div>
@@ -228,23 +206,6 @@
 			</div>
 		</div>
 	</div>
-	<footer> 
-		<nav id="nav-footer" class="navbar navbar-static-bot navbar-expand-lg navbar-dark bg-primary">
-			<div class="esquerda" >
-				<h3>G4.dev</h3>
-			</div>
-			<div class="collapse navbar-collapse" id="navbarColor01">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="pagina-quem-somos.html#qspage">Quem somos?</a>
-					</li>
-					<li class="nav-item nav-item">
-					<a class="nav-link" href="pagina-ajuda.html#hpage"><span class="glyphicon glyphicon-question-sign"></span>Ajuda</a>
-					</li>
-				</ul>	
-			</div>
-			
-			<div><a class="nav-link" href="#">Ir para o topo</a></div>
-		</nav>	
-	</footer>
+	<jsp:include page = "footer.html">
 </body>
 </html>

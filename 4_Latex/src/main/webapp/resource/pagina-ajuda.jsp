@@ -11,7 +11,7 @@
 </head>
 <body id="hpage">
 
-	<c: import url = "cabecalho.jsp" />
+	<jsp:include page = "cabecalho.jsp" />
 
 	<section>
 		<div>
@@ -131,7 +131,7 @@
 	</section>
 
 	<footer>
-		<c: import url = "rodape.jsp" />
+		<jsp:include page = "rodape.jsp" />
 	</footer>
 	
 </body>

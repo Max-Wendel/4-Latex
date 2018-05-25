@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: 4Latex
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: max
+Built-By: Nathan Lima
 Implementation-Vendor-Id: br.com.g4dev
 Build-Jdk: 1.8.0_171
 Implementation-URL: http://projects.spring.io/spring-boot/4Latex/

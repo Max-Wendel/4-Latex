@@ -5,19 +5,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="arq_imagem")
 public class ArqImagemModel {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO) 
 	private Long id;
 	private String nome;
 	private String diretorio;
 	
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name = "id_template")
 	private TemplateModel template;
 	

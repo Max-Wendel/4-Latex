@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,10 +15,6 @@ public class CategoriaModel {
 	private Long id;
 	private String nome;
 	private String tags;
-	
-	@OneToMany
-	@JoinColumn(name = "id_script")
-	private ScriptModel script;
 	
 	public Long getId() {
 		return id;

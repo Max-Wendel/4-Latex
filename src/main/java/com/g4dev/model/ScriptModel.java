@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,7 +19,7 @@ public class ScriptModel {
 	private String tags;
 	private String codigoScript;
 
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name = "id_script")
 	private CategoriaModel categoria;
 

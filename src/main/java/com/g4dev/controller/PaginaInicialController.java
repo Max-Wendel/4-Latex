@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PaginaInicialController {
 
 	@RequestMapping("/")
-
 	public String paginaInicial() {
 		return "pagina-inicial";
 	}

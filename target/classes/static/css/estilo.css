@@ -87,3 +87,18 @@ aside p{
 	text-align: justify;
 	text-indent: 20px;
 }
+
+#login-form{
+	position:absolute;
+	left: 50%;
+	top: 30%;
+	margin-left:-120px;
+   	margin-top:-45px;
+}
+#text-login-form{
+	position:absolute;
+	left: 40%;
+	top: 20%;
+	margin-left:-120px;
+   	margin-top:-45px;
+}

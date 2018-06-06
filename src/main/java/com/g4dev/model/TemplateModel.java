@@ -19,7 +19,7 @@ public class TemplateModel {
 	@JoinColumn(name = "id_arqimagem")
 	private List<ArqImagemModel> arqImagens;
 	//private List<ArqTexto> arqTexto;
-	
+	 
 	public Long getId() {
 		return id;
 	}

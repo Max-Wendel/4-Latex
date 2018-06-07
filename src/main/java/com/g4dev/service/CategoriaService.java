@@ -1,20 +1,20 @@
 package com.g4dev.service;
 
-import com.g4dev.model.CategoriaModel;
+import com.g4dev.model.Categoria;
 
 public class CategoriaService {
 
-	CategoriaModel categoria;
+	Categoria categoria;
 	
-	public void add(CategoriaModel categoria) {
+	public void add(Categoria categoria) {
 		
 	}
 	
-	public void delete(CategoriaModel categoria) {
+	public void delete(Categoria categoria) {
 		
 	}
 	
-	public void search(CategoriaModel categoria) {
+	public void search(Categoria categoria) {
 		
 	}
 	

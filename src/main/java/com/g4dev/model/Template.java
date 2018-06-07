@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
-public class TemplateModel {
+public class Template {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -17,7 +17,7 @@ public class TemplateModel {
 	
 	@OneToMany(mappedBy = "id_arqimagem")
 	@JoinColumn(name = "id_arqimagem")
-	private List<ArqImagemModel> arqImagens;
+	private List<ArqImagem> arqImagens;
 	//private List<ArqTexto> arqTexto;
 	 
 	public Long getId() {
@@ -38,10 +38,10 @@ public class TemplateModel {
 	public void setDescrição(String descrição) {
 		this.descrição = descrição;
 	}
-	public List<ArqImagemModel> getArqImagens() {
+	public List<ArqImagem> getArqImagens() {
 		return arqImagens;
 	}
-	public void setArqImagens(List<ArqImagemModel> arqImagens) {
+	public void setArqImagens(List<ArqImagem> arqImagens) {
 		this.arqImagens = arqImagens;
 	}
 	
@@ -63,7 +63,7 @@ public class TemplateModel {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TemplateModel other = (TemplateModel) obj;
+		Template other = (Template) obj;
 		if (arqImagens == null) {
 			if (other.arqImagens != null)
 				return false;

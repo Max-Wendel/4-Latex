@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>4Latex</title>
+	<link rel="shortcut icon" href="/img/icone4.ico"/>
+	<link rel="shortcut icon" href="/img/icone4.ico"/>
+	<link rel="stylesheet" href="/css/estilo.css"/>	
+	<link rel="stylesheet" href="/css/bootstrap_litera_tema.min.css"/>	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+	<meta charset="utf-8"/>
+	
+	<!-- Navbar responsivo -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</head>
+<body>
+
+	<header>
+		<nav id="nav-header" class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="/">4LatexADM</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li><a class="nav-link" href="/scripts">Scripts
+						<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Templates</a>
+					</li>
+					<li class="nav-item nav-item"><a class="nav-link" href="/settings" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">
+						<span class="glyphicon glyphicon-question-sign"></span>Dados da Conta</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Imagem</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Codigo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="script: ${todosOsScripts}">
+				<td><img th:src="@{'/img/'+${script.nome}+.png}"/> </td>
+				<td th:text="${script.nome}"></td>
+				<td th:text="${script.codigo}"></td>
+				<td><a th:href="@{atualizar/{id}(id = ${script.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a></td>
+				<td><a class="btn btn-danger" th:href="@{excluir/{id}(id = ${script.id})}">Excluir</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</section>
+
+
+
+
+
+
+
+
+</body>
+</html>

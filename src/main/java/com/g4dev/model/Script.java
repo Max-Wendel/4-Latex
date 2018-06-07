@@ -4,13 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "script")
-public class ScriptModel {
+public class Script {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -18,10 +16,7 @@ public class ScriptModel {
 	private String nome;
 	private String tags;
 	private String codigoScript;
-
-	@ManyToOne
-	@JoinColumn(name = "id_script")
-	private CategoriaModel categoria;
+	private String path;
 
 	public Long getId() {
 		return id;
@@ -67,7 +62,6 @@ public class ScriptModel {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((categoria == null) ? 0 : categoria.hashCode());
 		result = prime * result + ((codigoScript == null) ? 0 : codigoScript.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((idCat == null) ? 0 : idCat.hashCode());
@@ -84,12 +78,7 @@ public class ScriptModel {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ScriptModel other = (ScriptModel) obj;
-		if (categoria == null) {
-			if (other.categoria != null)
-				return false;
-		} else if (!categoria.equals(other.categoria))
-			return false;
+		Script other = (Script) obj;
 		if (codigoScript == null) {
 			if (other.codigoScript != null)
 				return false;
@@ -118,5 +107,21 @@ public class ScriptModel {
 		return true;
 	}
 
+	public void setpath( String path) {
+		// TODO Auto-generated method stub
+		this.setPath(path);
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+
+
+	
 	
 }

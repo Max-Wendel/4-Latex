@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("4Latex")
 public class CategoriaController {
 	@RequestMapping("/categorias")
 	public String paginaCategorias() {

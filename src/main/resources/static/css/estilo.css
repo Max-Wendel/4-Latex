@@ -102,3 +102,10 @@ aside p{
 	margin-left:-120px;
    	margin-top:-45px;
 }
+
+#ADM-text{
+	position: absolute;
+	margin-left: 18%;
+	margin-top: 2%;
+}
+

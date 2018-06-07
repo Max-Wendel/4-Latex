@@ -14,10 +14,9 @@ public class Script {
 	private Long id;
 	private Long idCat;
 	private String nome;
-	private String tags;
 	private String codigoScript;
 	private String path;
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -42,14 +41,6 @@ public class Script {
 		this.nome = nome;
 	}
 
-	public String getTags() {
-		return tags;
-	}
-
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
-
 	public String getCodigoScript() {
 		return codigoScript;
 	}
@@ -66,7 +57,6 @@ public class Script {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((idCat == null) ? 0 : idCat.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((tags == null) ? 0 : tags.hashCode());
 		return result;
 	}
 
@@ -99,11 +89,6 @@ public class Script {
 				return false;
 		} else if (!nome.equals(other.nome))
 			return false;
-		if (tags == null) {
-			if (other.tags != null)
-				return false;
-		} else if (!tags.equals(other.tags))
-			return false;
 		return true;
 	}
 
@@ -120,7 +105,9 @@ public class Script {
 		this.path = path;
 	}
 
-
+	public void verificarTags(String codigo) {
+		
+	}
 
 	
 	

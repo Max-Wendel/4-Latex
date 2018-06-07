@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<meta charset="utf-8"/>
 	<title>4Latex</title>
-	<link rel="shortcut icon" href="/img/icone4.ico"/>
 	<link rel="shortcut icon" href="/img/icone4.ico"/>
 	<link rel="stylesheet" href="/css/estilo.css"/>	
 	<link rel="stylesheet" href="/css/bootstrap_litera_tema.min.css"/>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>	
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
-	<meta charset="utf-8"/>
+	
 </head>
-<body id="homepage" > 
+<body id="homepage"> 
 	<div class="header">
 			<header>
 				<nav id="nav-header" class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-primary">
@@ -20,10 +22,10 @@
 
 					<div class="collapse navbar-collapse" id="navbarColor01">
 						<ul class="navbar-nav mr-auto">
-							<li><a class="nav-link" href="/categorias">Categorias
+							<li><a class="nav-link" href="/4Latex/categorias">Categorias
 							<span class="sr-only">(current)</span>
 							</a></li>
-							<li class="nav-item"><a class="nav-link" href="/templates">Templates</a>
+							<li class="nav-item"><a class="nav-link" href="/4Latex/templates">Templates</a>
 							</li>
 							<li class="nav-item nav-item"><a class="nav-link" href="/4Latex/ajuda">
 							<span class="glyphicon glyphicon-question-sign"></span>Ajuda</a>
@@ -34,13 +36,52 @@
 			</header>
 		</div>
 	<div class="linha">
-		<section>
-			<div class="coluna col3 sidebar">
-				 <img id="apresentacao" src="/img/black.jpeg" width="950px" height="300px" />
+		<section id="csl" class="container-fluid">
+			<div>
+				 <div >
+					<div id="crl" >
+						<div id="demo" class="carousel slide" data-ride="carousel" style="background:gray;">
+									<!-- Indicators -->
+									<ul class="carousel-indicators">
+										<li data-target="#demo" data-slide-to="0" class="active"></li>
+										<li data-target="#demo" data-slide-to="1"></li>
+										<li data-target="#demo" data-slide-to="2"></li>
+									</ul>
+		
+									<!-- The slideshow -->
+									<div class="carousel-inner">
+										<center>
+										<div class="carousel-item active">
+											<img
+												src="/img/black.jpeg" width="100%"/>
+		
+										</div>
+										<div class="carousel-item">
+											<img
+												src="/img/black.jpeg" width="100%"/>
+										</div>
+										<div class="carousel-item">
+		
+											<img
+												src="/img/black.jpeg" width="100%"/>
+		
+										</div>
+										</center>
+									</div>
+		
+									<!-- Left and right controls -->
+									<a class="carousel-control-prev" href="#demo" data-slide="prev">
+										<span class="carousel-control-prev-icon"></span>
+									</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+										<span class="carousel-control-next-icon"></span>
+									</a>
+								</div>
+							</div>
+					</div>
 			</div>
 		</section>
 	</div>
-	<div class="conteudo-extra">
+	<div class="conteudo-extra container-fluid"> 
 		<div class="linha">
 			<div class="coluna col7">
 				<section>
@@ -66,7 +107,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbarColor01">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="pagina-quem-somos.html#qspage">Quem somos?</a>
+					<li class="nav-item"><a class="nav-link" href="/4Latex/quem-somos">Quem somos?</a>
 					</li>
 					<li class="nav-item nav-item">
 					<a class="nav-link" href="/4Latex/ajuda"><span class="glyphicon glyphicon-question-sign"></span>Ajuda</a>

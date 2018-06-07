@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="/css/bootstrap_litera_tema.min.css"/>	
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
 	<meta charset="utf-8"/>
+	<script src="js/jquery.js"></script>
+	<script src="js/show-modal.js"></script> 
 	
 	<!-- Navbar responsivo -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -37,25 +39,74 @@
 		</nav>
 	</header>
 
-	<section>
-		<table class="table">
-		<thead>
-			<tr>
-				<th scope="col">Imagem</th>
-				<th scope="col">Nome</th>
-				<th scope="col">Codigo</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="script: ${todosOsScripts}">
-				<td><img th:src="@{'/img/'+${script.nome}+.png}"/> </td>
-				<td th:text="${script.nome}"></td>
-				<td th:text="${script.codigo}"></td>
-				<td><a th:href="@{atualizar/{id}(id = ${script.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a></td>
-				<td><a class="btn btn-danger" th:href="@{excluir/{id}(id = ${script.id})}">Excluir</a></td>
-			</tr>
-		</tbody>
-	</table>
+	<section class="container">
+		<!--modal-->
+			<div id="modal-form" class="modal fade" >
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Cadastrar Script</h5>
+							<button id="botãoClose" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+								<span aria-hidden="true">&times;</span>
+							</button>
+
+						</div>
+						<div class="modal-body">
+							<form method="POST" action="/salvarScript" enctype="multipart/form-data" th:object="${script}">
+								<input type="hidden" th:field="*{id}"/>
+								<div>
+									<label for="codigo">Nome do Script</label>
+									<input type="text" name="nome" class="form-control"/>
+								</div>	
+							
+								<div>
+									<label for="codigo">Código LaTeX</label>
+									<textarea class="form-control" id="exampleTextarea" name="codigoScript" rows="12"></textarea>
+								</div>
+								
+								<div>
+									<label for="imagem">Imagem do Script</label>
+									<input type="file" name="imagem" id="imagem"/>									
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">	
+							
+        					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							
+							<a type="submit" class="btn btn-primary" href="/salvarScript" >Cadastrar</a>
+ 							
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		<div id="main-content">
+			<div class="row">
+				<div class="float-left col-3"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-form" id="btncriar">Criar Script</button></div>
+				<div class="float-right col-9"><input type="text" name="search" class="form-control" placeholder="Procurar" id="procurar"/></div>
+			</div>
+			<div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Imagem</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Codigo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="script: ${todosOsScripts}">
+							<td><img th:src="@{'/img/'+${script.nome}+.png}"/> </td>
+							<td th:text="${script.nome}"></td>
+							<td th:text="${script.codigo}"></td>
+							<td><a th:href="@{atualizar/{id}(id = ${script.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a></td>
+							<td><a class="btn btn-danger" th:href="@{excluir/{id}(id = ${script.id})}">Excluir</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</section>
 
 

@@ -51,12 +51,10 @@ h2,h3{
 	color: #ebebeb;
 }
 
-img#apresentacao{
-	margin-bottom:40px;
-	margin-top: 40px;
-}
-img#extra{
-	margin-top:23px;
+section#csl{
+	margin-top:40px;
+	margin-bottom:35px; 
+	width:960px;
 }
 
 .conteudo-extra{
@@ -87,25 +85,3 @@ aside p{
 	text-align: justify;
 	text-indent: 20px;
 }
-
-#login-form{
-	position:absolute;
-	left: 50%;
-	top: 30%;
-	margin-left:-120px;
-   	margin-top:-45px;
-}
-#text-login-form{
-	position:absolute;
-	left: 40%;
-	top: 20%;
-	margin-left:-120px;
-   	margin-top:-45px;
-}
-
-#ADM-text{
-	position: absolute;
-	margin-left: 18%;
-	margin-top: 2%;
-}
-

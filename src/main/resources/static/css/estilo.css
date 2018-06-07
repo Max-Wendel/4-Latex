@@ -88,6 +88,28 @@ aside p{
 	text-indent: 20px;
 }
 
+float-right{
+	float: right;
+}
+
+float-left{
+	float: left;
+}
+
+#procurar{
+	width: 100%;
+	margin-left: -10px;
+}
+
+#btncriar{
+	margin-left: 5%;
+}
+
+#main-content{
+	margin-top: 10%;
+	margin-left: 15%;
+}
+
 #login-form{
 	position:absolute;
 	left: 50%;

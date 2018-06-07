@@ -51,12 +51,10 @@ h2,h3{
 	color: #ebebeb;
 }
 
-img#apresentacao{
-	margin-bottom:40px;
-	margin-top: 40px;
-}
-img#extra{
-	margin-top:23px;
+section#csl{
+	margin-top:40px;
+	margin-bottom:35px; 
+	width:960px;
 }
 
 .conteudo-extra{

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="arq_imagem")
-public class ArqImagemModel {
+public class ArqImagem {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO) 
 	private Long id;
@@ -51,7 +51,7 @@ public class ArqImagemModel {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ArqImagemModel other = (ArqImagemModel) obj;
+		ArqImagem other = (ArqImagem) obj;
 		if (diretorio == null) {
 			if (other.diretorio != null)
 				return false;

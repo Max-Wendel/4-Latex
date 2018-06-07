@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "categoria")
-public class CategoriaModel {
+public class Categoria {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -51,7 +51,7 @@ public class CategoriaModel {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CategoriaModel other = (CategoriaModel) obj;
+		Categoria other = (Categoria) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

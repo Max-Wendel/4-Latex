@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.g4dev.model.Categoria;
 import com.g4dev.model.Script;
 
 @Controller
@@ -18,6 +19,7 @@ public class EscopoADMController {
 	public ModelAndView crudScript() {
 		ModelAndView mv = new ModelAndView("gerenciar-script");
 		mv.addObject("script", new Script());
+		mv.addObject("categoria", new Categoria());
 		return mv;
 	}
 }

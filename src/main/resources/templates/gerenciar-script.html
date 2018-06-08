@@ -40,7 +40,7 @@
 	</header>
 
 	<section class="container">
-		<!--modal-->
+		<!--modal cadastro script-->
 			<div id="modal-form" class="modal fade" >
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -80,11 +80,44 @@
 					</div>
 				</div>
 			</div>
+
+		<!--modal cadastro categoria-->
+			<div id="modal-form-cat" class="modal fade" >
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Cadastrar Categoria</h5>
+							<button id="botãoClose" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+								<span aria-hidden="true">&times;</span>
+							</button>
+
+						</div>
+						<div class="modal-body">
+							<form method="POST" action="/salvarCategoria" th:object="${categoria}">
+								<input type="hidden" th:field="*{id}"/>
+								<div>
+									<label for="codigo">Nome da Categoria</label>
+									<input type="text" name="nome" class="form-control"/>
+								</div>	
+							</form>
+						</div>
+						<div class="modal-footer">	
+							
+        					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							
+							<a type="submit" class="btn btn-primary" href="/salvarCategoria" >Cadastrar</a>
+ 							
+						</div>
+					</div>
+				</div>
+			</div>
+		
 	
 		<div id="main-content">
 			<div class="row">
 				<div class="float-left col-3"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-form" id="btncriar">Criar Script</button></div>
-				<div class="float-right col-9"><input type="text" name="search" class="form-control" placeholder="Procurar" id="procurar"/></div>
+				<div class="float-left col-3"><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-form-cat" id="btncriar">Criar Categoria</button></div>
+				<div class="float-right col-6"><input type="text" name="search" class="form-control" placeholder="Procurar" id="procurar"/></div>
 			</div>
 			<div>
 				<table class="table">

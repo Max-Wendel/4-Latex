@@ -18,4 +18,14 @@ public class G4devFileUtil {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void salvarTexto(String caminho, MultipartFile texto) {
+		File file = new File(caminho);
+		try {
+			FileUtils.writeByteArrayToFile(file,texto.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

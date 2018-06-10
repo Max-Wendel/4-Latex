@@ -15,6 +15,7 @@ import com.g4dev.model.TemplateSelecionado;
 import com.g4dev.service.TemplateSelecionadoService;
 
 @Controller
+@RequestMapping("/templare-selecionado")
 public class TemplateSelecionadoController {
 	
 	@Autowired

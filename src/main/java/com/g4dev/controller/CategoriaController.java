@@ -14,7 +14,7 @@ import com.g4dev.model.Categoria;
 import com.g4dev.service.CategoriaService;
 
 @Controller
-@RequestMapping("4Latex")
+@RequestMapping("/4Latex")
 public class CategoriaController {
 	
 	@Autowired

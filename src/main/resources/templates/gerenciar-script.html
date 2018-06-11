@@ -29,7 +29,7 @@
 					<li><a class="nav-link" href="/scripts">Scripts
 						<span class="sr-only">(current)</span>
 					</a></li>
-					<li class="nav-item"><a class="nav-link" href="">Templates</a>
+					<li class="nav-item"><a class="nav-link" href="/gerenciarTemplates">Templates</a>
 					</li>
 					<li class="nav-item nav-item"><a class="nav-link" href="/settings" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">
 						<span class="glyphicon glyphicon-question-sign"></span>Dados da Conta</a>
@@ -93,20 +93,18 @@
 
 						</div>
 						<div class="modal-body">
-							<form method="POST" action="/salvarCategoria" th:object="${categoria}">
+							<form method="POST" action="/categoria/salvarCategoria" th:object="${categoria}">
 								<input type="hidden" th:field="*{id}"/>
 								<div>
 									<label for="codigo">Nome da Categoria</label>
 									<input type="text" name="nome" class="form-control"/>
 								</div>	
+        					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary" >Cadastrar</button> 							
 							</form>
 						</div>
 						<div class="modal-footer">	
 							
-        					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-							
-							<a type="submit" class="btn btn-primary" href="/salvarCategoria" >Cadastrar</a>
- 							
 						</div>
 					</div>
 				</div>

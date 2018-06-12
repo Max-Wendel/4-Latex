@@ -14,7 +14,7 @@ import com.g4dev.model.Categoria;
 import com.g4dev.service.CategoriaService;
 
 @Controller
-@RequestMapping("/4Latex")
+@RequestMapping("4Latex")
 public class CategoriaController {
 	
 	@Autowired
@@ -34,9 +34,10 @@ public class CategoriaController {
 	
 	@GetMapping("/listarCategoria")
 	public ModelAndView listarCategoria() {
-		List<Categoria> categorias = categoriaService.listarCategoria();
-		ModelAndView mv = new ModelAndView("redirect:/scripts");
-		mv.addObject("todasAsCategorias", categorias);
+		List<Categoria> categoria = categoriaService.listarCategoria();
+		ModelAndView mv = new ModelAndView("scripts");
+		mv.addObject("todasAsCategorias", categoria);
+		
 		return mv;
 	}
 	

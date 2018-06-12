@@ -32,7 +32,7 @@ public class ScriptController {
 	public ModelAndView listarScrip() {
 		List<Script> scripts = scriptService.listarPessoa();
 		ModelAndView mv = new ModelAndView("redirect:/scripts");
-		mv.addObject("todasAsPessoas", scripts);
+		mv.addObject("todasOsCategorias", scripts);
 		return mv;
 	}
 	

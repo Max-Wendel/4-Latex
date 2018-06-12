@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>4Latex</title>
-	<link rel="shortcut icon" href="/img/icone4.ico"/>
-	<link rel="shortcut icon" href="/img/icone4.ico"/>
-	<link rel="stylesheet" href="/css/estilo.css"/>	
-	<link rel="stylesheet" href="/css/bootstrap_litera_tema.min.css"/>	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
-	<meta charset="utf-8"/>
-	<script src="js/jquery.js"></script>
-	<script src="js/show-modal.js"></script> 
-	
-	<!-- Navbar responsivo -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+<title>4Latex</title>
+<link rel="shortcut icon" href="/img/icone4.ico" />
+<link rel="shortcut icon" href="/img/icone4.ico" />
+<link rel="stylesheet" href="/css/estilo.css" />
+<link rel="stylesheet" href="/css/bootstrap_litera_tema.min.css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+	rel="stylesheet" />
+<meta charset="utf-8" />
+<script src="js/jquery.js"></script>
+<script src="js/show-modal.js"></script>
+
+<!-- Navbar responsivo -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
 </head>
 <body>
 
 	<header>
-		<nav id="nav-header" class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-primary">
+		<nav id="nav-header"
+			class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-primary">
 			<a class="navbar-brand" href="/">4LatexADM</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarColor01" aria-controls="navbarColor01"
+				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarColor01">
 				<ul class="navbar-nav mr-auto">
-					<li><a class="nav-link" href="/scripts">Scripts
-						<span class="sr-only">(current)</span>
+					<li><a class="nav-link" href="/scripts">Scripts <span
+							class="sr-only">(current)</span>
 					</a></li>
-					<li class="nav-item"><a class="nav-link" href="">Templates</a>
-					</li>
-					<li class="nav-item nav-item"><a class="nav-link" href="/settings" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">
-						<span class="glyphicon glyphicon-question-sign"></span>Dados da Conta</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="/gerenciarTemplates">Templates</a></li>
+					<li class="nav-item nav-item"><a class="nav-link"
+						href="/settings" data-toggle="tooltip" data-placement="bottom"
+						title="" data-original-title="Tooltip on bottom"> <span
+							class="glyphicon glyphicon-question-sign"></span>Dados da Conta
+					</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -41,90 +56,101 @@
 
 	<section class="container">
 		<!--modal cadastro script-->
-			<div id="modal-form" class="modal fade" >
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Cadastrar Script</h5>
-							<button id="botãoClose" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-								<span aria-hidden="true">&times;</span>
-							</button>
+		<div id="modal-form" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Cadastrar Script</h5>
+						<button id="botãoClose" type="button" class="close"
+							data-dismiss="modal" aria-label="Fechar">
+							<span aria-hidden="true">&times;</span>
+						</button>
 
-						</div>
-						<div class="modal-body">
-							<form method="POST" action="/salvarScript" enctype="multipart/form-data" th:object="${script}">
-								<input type="hidden" th:field="*{id}"/>
-								<div class="form-gruop" >
-									<label for="codigo">Nome do Script</label>
-									<input type="text" name="nome" class="form-control"/>
-								</div>	
-							
-								<div class="form-group" >
-									<label> Categorias </label>
-									<select th:each="categorias: ${todosAsCategorias}" >
-										<option th:text="categoria.nome" ></option>
+					</div>
+					<div class="modal-body">
+						<form method="POST" action="4Latex/salvarScript"
+							enctype="multipart/form-data" th:object="${script}">
+							<input type="hidden" th:field="*{id}" />
+							<div class="form-gruop">
+								<label for="codigo">Nome do Script</label> <input type="text"
+									name="nome" class="form-control" />
+							</div>
+
+							<div class="form-group" >
+								<label> Lista de categorias </label>
+								<div th:field="*{categoria}" >
+									<select class="form-control" name="categoria">
+										<option th:each="categoria : ${todasAsCategorias}" th:value="${categoria}" th:text="${categoria.nome}" >MEU DEUS!!!!</option>
 									</select>
 								</div>
-								
-								<div class="form-gruop" >
-									<label for="codigo">Código LaTeX</label>
-									<textarea class="form-control" id="exampleTextarea" name="codigoScript" rows="12"></textarea>
-								</div>
-								
-								<div class="form-gruop" >
-									<label for="imagem">Imagem do Script</label>
-									<input type="file" name="imagem" id="imagem"/>									
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">	
-							
-        					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-							
-							<a type="submit" class="btn btn-primary" href="/salvarScript" >Cadastrar</a>
- 							
-						</div>
+							</div>
+
+							<div class="form-gruop">
+								<label for="codigo">Código LaTeX</label>
+								<textarea class="form-control" id="exampleTextarea"
+									name="codigoScript" rows="12"></textarea>
+							</div>
+
+							<div class="form-gruop">
+								<label for="imagem">Imagem do Script</label> <input type="file"
+									name="imagem" id="imagem" />
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger"
+									data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Cadastrar</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
+		</div>
 
 		<!--modal cadastro categoria-->
-			<div id="modal-form-cat" class="modal fade" >
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Cadastrar Categoria</h5>
-							<button id="botãoClose" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-								<span aria-hidden="true">&times;</span>
-							</button>
+		<div id="modal-form-cat" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Cadastrar Categoria</h5>
+						<button id="botãoClose" type="button" class="close"
+							data-dismiss="modal" aria-label="Fechar">
+							<span aria-hidden="true">&times;</span>
+						</button>
 
-						</div>
-						<div class="modal-body">
-							<form method="POST" action="/4Latex/salvarCategoria" th:object="${categoria}">
-								<input type="hidden" th:field="*{id}"/>
-								<div  >
-									<label for="codigo">Nome da Categoria</label>
-									<input type="text" name="nome" class="form-control"/>
-								</div>	
-							</form>
-						</div>
-						<div class="modal-footer">	
-							
-        					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-							
-							<a type="submit" class="btn btn-primary" href="/salvarCategoria" >Cadastrar</a>
- 							
-						</div>
 					</div>
+					<div class="modal-body">
+						<form method="POST" action="/4Latex/salvarCategoria"
+							th:object="${categoria}">
+							<input type="hidden" th:field="*{id}" />
+							<div class="form-group">
+								<label for="codigo">Nome da Categoria</label> <input type="text"
+									name="nome" class="form-control" />
+							</div>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary">Cadastrar</button>
+						</form>
+					</div>
+					<div class="modal-footer"></div>
 				</div>
 			</div>
-		
-	
+		</div>
+
+
 		<div id="main-content">
 			<div class="row">
-				<div class="float-left col-3"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-form" id="btncriar">Criar Script</button></div>
-				<div class="float-left col-3"><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-form-cat" id="btncriar">Criar Categoria</button></div>
-				<div class="float-right col-6"><input type="text" name="search" class="form-control" placeholder="Procurar" id="procurar"/></div>
+				<div class="float-left col-3">
+					<button type="button" class="btn btn-primary" data-toggle="modal"
+						data-target="#modal-form" id="btncriar">Criar Script</button>
+				</div>
+				<div class="float-left col-3">
+					<button type="button" class="btn btn-secondary" data-toggle="modal"
+						data-target="#modal-form-cat" id="btncriar">Criar
+						Categoria</button>
+				</div>
+				<div class="float-right col-6">
+					<input type="text" name="search" class="form-control"
+						placeholder="Procurar" id="procurar" />
+				</div>
 			</div>
 			<div>
 				<table class="table">
@@ -137,11 +163,13 @@
 					</thead>
 					<tbody>
 						<tr th:each="script: ${todosOsScripts}">
-							<td><img th:src="@{'/img/'+${script.nome}+.png}"/> </td>
+							<td><img th:src="@{'/img/'+${script.nome}+.png}" /></td>
 							<td th:text="${script.nome}"></td>
 							<td th:text="${script.codigo}"></td>
-							<td><a th:href="@{atualizar/{id}(id = ${script.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a></td>
-							<td><a class="btn btn-danger" th:href="@{excluir/{id}(id = ${script.id})}">Excluir</a></td>
+							<td><a th:href="@{atualizar/{id}(id = ${script.id})}"><button
+										type="button" class="btn btn-primary">Atualizar</button></a></td>
+							<td><a class="btn btn-danger"
+								th:href="@{excluir/{id}(id = ${script.id})}">Excluir</a></td>
 						</tr>
 					</tbody>
 				</table>

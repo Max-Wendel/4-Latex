@@ -76,13 +76,15 @@
 									name="nome" class="form-control" />
 							</div>
 
-							<div class="form-group" >
 								<label> Lista de categorias </label>
-								<div th:field="*{categoria}" >
-									<select class="form-control" name="categoria">
-										<option th:each="categoria : ${todasAsCategorias}" th:value="${categoria}" th:text="${categoria.nome}" >MEU DEUS!!!!</option>
-									</select>
-								</div>
+							<div class="form-group" >
+								<select class="form-control" >
+									<option value="fomulas-matematicas" >Formulas Matematicas</option>
+									<option value="fomatacao-texto" >Formatação de Texto</option>
+									<option value="geracao-grafico" >Geração de Gráficos</option>
+									<option value="tabelas" >Tabelas</option>
+									<option value="figuras" >Figuras</option>									
+								</select>
 							</div>
 
 							<div class="form-gruop">

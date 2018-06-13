@@ -31,7 +31,7 @@ public class EscopoADMController {
 	//necessários para o cadastro de novos templates
 	@RequestMapping("/templates")
 	public ModelAndView crudTemplate() {
-		ModelAndView mv = new ModelAndView("gerenciar-template");
+		ModelAndView mv = new ModelAndView("cadastro-template");
 		mv.addObject("template", new TemplateSelecionado());
 		return mv;
 	}

@@ -19,7 +19,7 @@ public class TemplateSelecionadoService {
 	
 	public void salvarTempalteSelecionado(TemplateSelecionado template, MultipartFile texto) {
 		String caminho = "texto/"+template.getTitulo() +".txt";
-		G4devFileUtil.salvarTexto(caminho, texto);
+//		G4devFileUtil.salvarTexto(caminho, texto);
 		template.setTamanho((texto.getSize()/1000));
 		templateSelecionadoRepository.save(template);
 	}

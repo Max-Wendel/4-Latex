@@ -19,7 +19,7 @@ public class G4devFileUtil {
 		}
 	}
 	
-	public static void salvarTexto(String caminho, MultipartFile texto) {
+	public static void salvarZip(String caminho, MultipartFile texto) {
 		File file = new File(caminho);
 		try {
 			FileUtils.writeByteArrayToFile(file,texto.getBytes());

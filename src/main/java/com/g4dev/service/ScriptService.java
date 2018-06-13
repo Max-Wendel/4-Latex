@@ -17,7 +17,7 @@ public class ScriptService {
 
 	public void salvarScript(Script script, MultipartFile imagem) {
 		// TODO Auto-generated method stub
-		String path = "src/main/resource/static/img/scripts/"+ script.getNome() +".png";
+		String path = "src/main/resources/static/img/scripts/"+ script.getNome() +".png";
 		G4devFileUtil.salvarImagem(path, imagem);
 		script.setpath(path);
 		scriptRepository.save(script);

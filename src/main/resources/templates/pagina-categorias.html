@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8"/>
 	<title>Categorias</title>
@@ -43,51 +43,12 @@
 				</ul>
 			</div>
 		</nav>
-
-			<!--Nav(tabs)-->
-			<ul class="nav nav-tabs">
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#fMat">Fórmulas matemáticas</a>
-
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#fText">Formatação de texto</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#gGraf">Geração de gráfico</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#tabela">Tabelas</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#fig">Figuras</a>
-				</li>
-			</ul>
-
-			<div id="myTabContent" class="tab-content">
-				<div class="tab-pane fade" id="fMat">
-					<p>Formulas matematicas</p>
-				</div>
-				<div class="tab-pane fade" id="fText">
-					<p>Formatação de texto</p>
-				</div>
-				<div class="tab-pane fade" id="gGraf">
-					<p>Geração de gráficos</p>
-				</div>
-				<div class="tab-pane fade" id="tabela">
-					<p>Tabelas</p>
-				</div>
-				<div class="tab-pane fade" id="fig">
-					<p>Figuras</p>
-				</div>
-			</div>
-			
 			<!--modal-->
-			<div id="modal" class="modal fade" >
+			<div id="modal" class="modal fade">
 				<div class="modal-dialog">
-					<div class="modal-content">
+					<div class="modal-content" th:each="script: ${todosOsScripts}">
 						<div class="modal-header">
-							<h5 class="modal-title">Título do script</h5>
+							<h5 class="modal-title" th:text="${script.nome}"></h5>
 							<button id="botãoClose" type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -95,8 +56,8 @@
 						</div>
 						<div class="modal-body">
 							<p>Conteúdo do script.</p>
-							<textarea class="form-control" id="exampleTextarea" rows="12">
-								Código em latex.
+							<textarea class="form-control" id="exampleTextarea" rows="12" th:text="${script.codigoScript}">
+								
 							</textarea>
 						</div>
 						<div class="modal-footer">	

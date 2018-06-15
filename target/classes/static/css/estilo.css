@@ -94,6 +94,11 @@ float-left{
 	float: left;
 }
 
+tr img{
+	width: 300px;
+	height: 200px;
+}
+
 #procurar{
 	width: 100%;
 	margin-left: -10px;
@@ -129,3 +134,6 @@ float-left{
 	margin-top: 2%;
 }
 
+#sair{
+	color: #FFD;
+}

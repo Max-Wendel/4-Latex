@@ -1,7 +1,10 @@
 package com.g4dev.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,7 +35,14 @@ public class TemplateController {
 		ModelAndView mv = new ModelAndView("redirect:/templates");
 		return mv;
 	}
-
+	
+	@GetMapping("/listarTemplate")
+	public ModelAndView listarTemplates() {
+		List<Template> templates = tempService.listarTemplates();
+		ModelAndView mv = new ModelAndView("cadastro-template");
+		mv.addObject("todosOsTemplates", templates);
+		return mv;
+	}
 	// editar
 	// visualizar template
 	// baixar template

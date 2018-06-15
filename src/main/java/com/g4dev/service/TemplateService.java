@@ -1,5 +1,7 @@
 package com.g4dev.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,11 +18,11 @@ public class TemplateService {
 	
 	//add 3 imagens e um zip
 	public void salvarTemplate(Template temp, MultipartFile imagem1, MultipartFile imagem2, MultipartFile imagem3, MultipartFile zip) {
-		String pathImagem1 = "src/main/resource/static/img/templates/"+ temp.getNome() +"1.png";
-		String pathImagem2 = "src/main/resource/static/img/templates/"+ temp.getNome() +"2.png";
-		String pathImagem3 = "src/main/resource/static/img/templates/"+ temp.getNome() +"3.png";
+		String pathImagem1 = "src/main/resource/static/img/templates/"+ temp.getNomeTemplate() +"1.png";
+		String pathImagem2 = "src/main/resource/static/img/templates/"+ temp.getNomeTemplate() +"2.png";
+		String pathImagem3 = "src/main/resource/static/img/templates/"+ temp.getNomeTemplate() +"3.png";
 		
-		String pathZip = "src/main/resource/static/templates/zips/"+ temp.getNome() +".zip";
+		String pathZip = "src/main/resource/static/templates/zips/"+ temp.getNomeTemplate() +".zip";
 		
 		G4devFileUtil.salvarImagem(pathImagem1, imagem1);
 		G4devFileUtil.salvarImagem(pathImagem2, imagem2);
@@ -35,6 +37,10 @@ public class TemplateService {
 		temp.setPath(pathZip);
 		
 		tempRepo.save(temp);
+	}
+	
+	public List<Template> listarTemplates() {
+		return tempRepo.findAll();
 	}
 	
 }

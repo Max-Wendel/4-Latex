@@ -6,7 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.g4dev.model.Categoria;
 import com.g4dev.model.Script;
-import com.g4dev.model.TemplateSelecionado;
+import com.g4dev.model.Template;
 
 @Controller
 public class EscopoADMController {
@@ -32,7 +32,7 @@ public class EscopoADMController {
 	@RequestMapping("/templates")
 	public ModelAndView crudTemplate() {
 		ModelAndView mv = new ModelAndView("cadastro-template");
-		mv.addObject("template", new TemplateSelecionado());
+		mv.addObject("template", new Template());
 		return mv;
 	}
 }

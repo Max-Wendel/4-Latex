@@ -71,11 +71,11 @@
 							<input type="hidden" th:field="*{id}" />
 							<div class="form-gruop">
 								<label for="codigo">Nome do Template</label> <input type="text" 
-									name="nome" class="form-control" />
+									name="nome" id="nome" th:field="*{nomeTemplate}" class="form-control" />
 							</div>
 							<div class="form-gruop">
 								<label for="descricao">Descrição do template</label> 
-								<input type="text" name="desc" id="desc" class="form-control" />
+								<input type="text" th:field="*{descricao}" name="descricao" id="descricao" class="form-control" />
 							</div>
 							<div class="form-gruop"></div>
 
@@ -126,10 +126,10 @@
 					<tbody>
 						<tr th:each="template : ${todosOsTemplates}">
 							<td th:text="${template.nome}"></td>
-							<td><a th:href="@{atualizar/{id}(id = ${script.id})}"><button
+							<td><a th:href="@{atualizar/{id}(id = ${template.id})}"><button
 										type="button" class="btn btn-primary">Atualizar</button></a></td>
 							<td><a class="btn btn-danger"
-								th:href="@{excluir/{id}(id = ${script.id})}">Excluir</a></td>
+								th:href="@{excluir/{id}(id = ${template.id})}">Excluir</a></td>
 						</tr>
 					</tbody>
 				</table>

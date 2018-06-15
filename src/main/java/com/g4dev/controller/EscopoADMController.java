@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.g4dev.model.Script;
-import com.g4dev.model.TemplateSelecionado;
+import com.g4dev.model.Template;
 import com.g4dev.service.ScriptService;
+
 
 @Controller
 public class EscopoADMController {
@@ -39,7 +40,7 @@ public class EscopoADMController {
 	@RequestMapping("/templates")
 	public ModelAndView crudTemplate() {
 		ModelAndView mv = new ModelAndView("cadastro-template");
-		mv.addObject("template", new TemplateSelecionado());
+		mv.addObject("template", new Template());
 		return mv;
 	}
 }

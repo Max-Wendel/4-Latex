@@ -1,15 +1,21 @@
 package com.g4dev.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.g4dev.model.Categoria;
 import com.g4dev.model.Script;
 import com.g4dev.model.TemplateSelecionado;
+import com.g4dev.service.ScriptService;
 
 @Controller
 public class EscopoADMController {
+	
+	@Autowired
+	ScriptService scriptService;
 	
 	//Mapeamento para a página inicial de ADM
 	@RequestMapping("/entrar")
@@ -22,8 +28,9 @@ public class EscopoADMController {
 	@RequestMapping("/scripts")
 	public ModelAndView crudScript() {
 		ModelAndView mv = new ModelAndView("gerenciar-script");
-		mv.addObject("script", new Script());
-		mv.addObject("categoria", new Categoria());
+		List<Script> scripts = scriptService.listarScript();
+		mv.addObject("todosOsScripts", scripts);
+		mv.addObject("novoScript", new Script());
 		return mv;
 	}
 	

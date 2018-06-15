@@ -62,7 +62,7 @@
 					<div class="modal-body">
 						<form method="POST" action="4Latex/salvarTemplate"
 							enctype="multipart/form-data" th:object="${template}">
-							<input type="hidden" th:field="*{id}"/>
+							<input type="hidden" th:field="*{id}" />
 							<div class="form-gruop">
 								<label for="codigo">Nome do Template</label> <input type="text" 
 									name="nome" id="nome" th:field="*{nomeTemplate}" class="form-control" />

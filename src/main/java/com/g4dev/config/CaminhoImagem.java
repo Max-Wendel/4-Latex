@@ -26,7 +26,7 @@ public class CaminhoImagem implements WebMvcConfigurer{
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/images/**").addResourceLocations("file:images/");
+		registry.addResourceHandler("/images/scripts/**").addResourceLocations("file:images/scrips/");
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class ScriptService {
 		scriptRepository.save(script);
 	}
 	
-	public List<Script> listarPessoa(){
+	public List<Script> listarScript(){
 		return scriptRepository.findAll();
 	}
 

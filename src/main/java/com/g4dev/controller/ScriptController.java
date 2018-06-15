@@ -1,10 +1,7 @@
 package com.g4dev.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,14 +25,6 @@ public class ScriptController {
 		return mv;
 	}
 	
-	@GetMapping("/listarScripts")
-	public ModelAndView listarScrip() {
-		List<Script> scripts = scriptService.listarPessoa();
-		ModelAndView mv = new ModelAndView("redirect:/scripts");
-		mv.addObject("todasOsCategorias", scripts);
-		return mv;
-	}
-	
 	@RequestMapping("/atualizarScript/{id}")
 	public ModelAndView atualizarScript(@PathVariable Long id) {
 		Script script = scriptService.buscarPorId(id);
@@ -44,7 +33,7 @@ public class ScriptController {
 		return mv;
 	}
 	
-	@RequestMapping("/excluir/{id}")
+	@RequestMapping("script/excluir/{id}")
 	public ModelAndView ModelAndView(@PathVariable Long id) {
 		scriptService.excluirPorId(id);
 		ModelAndView mv = new ModelAndView("redirect:/scripts");
